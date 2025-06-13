@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LitSpace</title>
+    <link rel="stylesheet" href="Menu Utama.css">
+</head>
+<script>
+function toggleAccountDropdown() {
+  document.getElementById("accountDropdown").classList.toggle("show");
+}
+
+window.onclick = function(e) {
+  if (!e.target.matches('#accountButton')) {
+    const dropdown = document.getElementById("accountDropdown");
+    if (dropdown && dropdown.classList.contains("show")) {
+      dropdown.classList.remove("show");
+    }
+  }
+};
+
+// Set nama akun dari localStorage
+document.addEventListener("DOMContentLoaded", () => {
+  const username = localStorage.getItem("username");
+  if (username) {
+    document.getElementById("accountButton").textContent = `${username} ▾`;
+  }
+});
+
+function logout() {
+  localStorage.removeItem("username");
+  window.location.href = "login.html"; // redirect ke halaman login
+}
+</script>
+
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="Logo.png" alt="LitSpace">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Menu utama.html">BERANDA</a></li>
+                <li><a href="sport.html">SPORT</a></li>
+                <li><a href="edukasi.html">EDUKASI</a></li>
+                <li><a href="teknologi.html">TEKNOLOGI</a></li>
+                <li><a href="buku.html">BUKU</a></li>
+            </ul>
+        </nav>
+
+       <div class="account-menu">
+    <button id="accountButton" onclick="toggleAccountDropdown()">Akun ▾</button>
+    <div class="dropdown" id="accountDropdown">
+        <a href="profil.html">Profil Saya</a>
+        <a href="#" onclick="logout()">Keluar</a>
+    </div>
+</div>
+
+
+    </header>
+
+    <section class="hero">
+        <h1>Selamat Datang di LitSpace</h1>
+        <p>Temukan Cara Hidup Lo!</p>
+    </section>
+
+    <section class="latest-news">
+        <h2>Berita & Artikel Terbaru</h2>
+        <div class="articles">
+            <article>
+                <h3>Judul Artikel 1</h3>
+                <p>Ringkasan artikel singkat...</p>
+                <a href="#">Baca selengkapnya</a>
+            </article>
+            <article>
+                <h3>Judul Artikel 2</h3>
+                <p>Ringkasan artikel singkat...</p>
+                <a href="#">Baca selengkapnya</a>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>Kontak: <a href="mailto:litspace@gmail.com">litspace@gmail.com</a></p>
+    </footer>
+</body>
+</html>

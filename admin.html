@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel - LitSpace</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Panel Admin - LitSpace</h1>
+
+    <form id="articleForm">
+      <input type="text" id="title" placeholder="Judul Artikel" required />
+      <textarea id="content" placeholder="Isi Konten" required></textarea>
+      <input type="file" id="image" accept="image/*" />
+      
+      <select id="category" required>
+        <option value="">-- Pilih Kategori --</option>
+        <option value="sport">Sport</option>
+        <option value="teknologi">Teknologi</option>
+        <option value="edukasi">Edukasi</option>
+        <option value="buku">Buku</option>
+      </select>
+      <button type="submit">Unggah Artikel</button>
+    </form>
+
+    <hr />
+
+    <h2>Preview Artikel</h2>
+    <div class="tabs">
+      <button onclick="showCategory('sport')">Sport</button>
+      <button onclick="showCategory('teknologi')">Teknologi</button>
+      <button onclick="showCategory('edukasi')">Edukasi</button>
+      <button onclick="showCategory('buku')">Buku</button>
+    </div>
+
+    <div id="previewArea"></div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e;
+    color: white;
+}
+
+header {
+    background-color: #16213e;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #0f3460;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #e94560;
+    border-radius: 5px;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0f3460;
+}
+
+.latest-news {
+    padding: 20px;
+    text-align: center;
+}
+
+.articles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+article {
+    background-color: #16213e;
+    padding: 15px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+article h3 {
+    color: #e94560;
+}
+
+article a {
+    color: #00adb5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #16213e;
+}
